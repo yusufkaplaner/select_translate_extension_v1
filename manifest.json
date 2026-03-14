@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Anında Çeviri",
+  "version": "1.0",
+  "description": "Seçilen metni anında Türkçeye çevirir",
+  "permissions": [],
+  "host_permissions": ["https://translate.googleapis.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["style.css"]
+    }
+  ]
+}

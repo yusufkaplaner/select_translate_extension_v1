@@ -1,0 +1,33 @@
+#aninda-ceviri-tooltip {
+  position: fixed;
+  z-index: 2147483647;
+  background: #1a1a2e;
+  color: #e0e0ff;
+  padding: 8px 13px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: 'Segoe UI', sans-serif;
+  max-width: 360px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.45);
+  line-height: 1.5;
+  pointer-events: none;
+  border: 1px solid #3a3a6e;
+  animation: ceviri-fadein 0.15s ease;
+}
+
+@keyframes ceviri-fadein {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+#aninda-ceviri-tooltip .ceviri-yukleniyor {
+  color: #888;
+  font-style: italic;
+}
+
+#aninda-ceviri-tooltip .ceviri-bayrak {
+  font-size: 11px;
+  color: #7878cc;
+  margin-bottom: 3px;
+  display: block;
+}
