@@ -1,23 +1,38 @@
 #aninda-ceviri-tooltip {
-  position: fixed;
+  position: absolute;
   z-index: 2147483647;
   background: #1a1a2e;
   color: #e0e0ff;
-  padding: 8px 13px;
-  border-radius: 8px;
+  padding: 10px 14px 8px;
+  border-radius: 10px;
   font-size: 14px;
   font-family: 'Segoe UI', sans-serif;
   max-width: 360px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.45);
-  line-height: 1.5;
-  pointer-events: none;
+  min-width: 180px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.5);
+  line-height: 1.55;
   border: 1px solid #3a3a6e;
   animation: ceviri-fadein 0.15s ease;
+  pointer-events: auto;
 }
 
 @keyframes ceviri-fadein {
-  from { opacity: 0; transform: translateY(4px); }
+  from { opacity: 0; transform: translateY(5px); }
   to   { opacity: 1; transform: translateY(0); }
+}
+
+#aninda-ceviri-tooltip .ceviri-bayrak {
+  font-size: 11px;
+  color: #7878cc;
+  margin-bottom: 4px;
+  display: block;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+#aninda-ceviri-tooltip .ceviri-metin {
+  display: block;
+  margin-bottom: 8px;
 }
 
 #aninda-ceviri-tooltip .ceviri-yukleniyor {
@@ -25,9 +40,31 @@
   font-style: italic;
 }
 
-#aninda-ceviri-tooltip .ceviri-bayrak {
-  font-size: 11px;
-  color: #7878cc;
-  margin-bottom: 3px;
-  display: block;
+#aninda-ceviri-tooltip .ceviri-actions {
+  display: flex;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+#aninda-ceviri-tooltip .ceviri-btn {
+  background: #2a2a4e;
+  color: #c0c0ff;
+  border: 1px solid #4a4a8e;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+#aninda-ceviri-tooltip .ceviri-btn:hover {
+  background: #3a3a7e;
+  color: #ffffff;
+}
+
+#aninda-ceviri-tooltip .ceviri-btn.speaking {
+  background: #5a1a1a;
+  border-color: #aa4444;
+  color: #ffaaaa;
 }
