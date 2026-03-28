@@ -58,4 +58,4 @@ Chrome Extension API: Built on the Manifest V3 architecture.
 Google Translate API: Utilizing the gtx endpoint for translation fetching.
 
 License
-This project is licensed under the MIT License.
+This project is licensed under the MIT License.   
